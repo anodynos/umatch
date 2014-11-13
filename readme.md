@@ -7,6 +7,19 @@ A `function(filename, specs)` thats checks if `'someFile.ext'` passes through an
 
 _Note: `umatch` replaces the deprecated [`is_file_in`](http://github.com/anodynos/is_file_in) with extending behavior._
 
+
+## Simple Usage
+
+```
+ var umatch = require('umatch');
+
+ umatch('myfile.txt', ['**/*.txt']) // true
+
+ umatch('myfile.txt', ['**/*.txt', '!my*']) // false
+
+```
+## File specs
+
 The Array of filename specifications (or simply filenames), can expressed in either:
 
   * `String` in *gruntjs*'s-like expand `minimatch` format (eg `'**/*.coffee'`) and its exclusion cousin (eg `'!**/DRAFT*.*'`)
@@ -49,8 +62,8 @@ The Array of filename specifications (or simply filenames), can expressed in eit
   var specs = [
     '**/recources/*',
     '!badFile.json',
-    /.*\.someExtension$/i, '!',
-    /.*\.excludeExtension$/i,
+    /.*\.someExtension$/i,
+    '!', /.*\.excludeExtension$/i,
     function(fn) { return fn === 'includedFile.ext' },
     '!', function(fn) { return _.startsWith('DRAFT') }
   ];

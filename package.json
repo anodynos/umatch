@@ -1,7 +1,7 @@
 {
   "name": "umatch",
   "description": "A `function(filename, specs)` thats checks if `'someFile.ext'` passes through an of Array of `minimatch` / `RegExp` / `callbacks` / `Array` (recursive) specs, with a negation/exclusion '!' flag for all.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "http://github.com/anodynos/umatch/",
   "author": {
     "name": "Agelos Pikoulas",

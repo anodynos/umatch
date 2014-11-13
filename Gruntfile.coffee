@@ -7,8 +7,8 @@ module.exports = gruntFunction = (grunt) ->
 
       lib:
         path: 'source/code'
-        dstPath: 'build/lib'
-        template: 'combined'
+        dstPath: 'build/code'
+        template: 'nodejs'
         resources: [ 'inject-version' ]
 
       spec:
