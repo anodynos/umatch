@@ -53,7 +53,7 @@
     "grunt-urequire": "0.7.x",
     "urequire": ">=0.7.x",
     "uberscore": "0.0.16",
-    "urequire-ab-specrunner": "^0.1.6",
+    "urequire-ab-specrunner": "^0.1.7",
     "urequire-rc-import-keys": "^0.1.2",
     "urequire-rc-inject-version": "^0.1.2"
   }

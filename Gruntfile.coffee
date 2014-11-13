@@ -3,12 +3,13 @@ module.exports = gruntFunction = (grunt) ->
     urequire:
       _all:
         dependencies: imports: {lodash: ['_']}
-        template: banner: true
+        template:
+          name: 'nodejs'
+          banner: true
 
       lib:
         path: 'source/code'
         dstPath: 'build/code'
-        template: 'nodejs'
         resources: [ 'inject-version' ]
 
       spec:
@@ -27,8 +28,7 @@ module.exports = gruntFunction = (grunt) ->
 
       specWatch: derive: 'spec', watch: true
 
-  _ = require 'lodash'
-  splitTasks = (tasks)-> if _.isArray tasks then tasks else _.filter tasks.split /\s/
+  splitTasks = (tasks)-> if (tasks instanceof Array) then tasks else tasks.split(/\s/).filter((f)->!!f)
   grunt.registerTask shortCut, "urequire:#{shortCut}" for shortCut of gruntConfig.urequire
   grunt.registerTask shortCut, splitTasks tasks for shortCut, tasks of {
     default: 'lib spec'
