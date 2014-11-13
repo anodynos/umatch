@@ -1,0 +1,60 @@
+{
+  "name": "umatch",
+  "description": "A `function(filename, specs)` thats checks if `'someFile.ext'` passes through an of Array of `minimatch` / `RegExp` / `callbacks` / `Array` (recursive) specs, with a negation/exclusion '!' flag for all.",
+  "version": "0.2.0",
+  "homepage": "http://github.com/anodynos/umatch/",
+  "author": {
+    "name": "Agelos Pikoulas",
+    "email": "agelos.pikoulas@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "keywords": [
+    "minimatch",
+    "glob",
+    "filenames",
+    "pass",
+    "filter",
+    "files",
+    "regexp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anodynos/umatch"
+  },
+  "bugs": {
+    "url": "http://github.com/anodynos/umatch/issues",
+    "email": "agelos.pikoulas@gmail.com"
+  },
+  "main": "./build/code/umatch.js",
+  "preferGlobal": false,
+  "scripts": {
+    "test": "grunt"
+  },
+  "directories": {
+    "dist": "./build"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "lodash": "*",
+    "minimatch": "1.0.x"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "grunt": "0.4.5",
+    "grunt-contrib-watch": "~0.5.x",
+    "grunt-urequire": "0.7.x",
+    "urequire": ">=0.7.x",
+    "uberscore": "0.0.16",
+    "urequire-ab-specrunner": "^0.1.6",
+    "urequire-rc-import-keys": "^0.1.2",
+    "urequire-rc-inject-version": "^0.1.2"
+  }
+}
