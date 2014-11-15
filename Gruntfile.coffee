@@ -15,7 +15,6 @@ module.exports = gruntFunction = (grunt) ->
       spec:
         path: 'source/spec'
         dstPath: 'build/spec'
-        main: 'umatch-spec'
         dependencies: imports:
           umatch: 'umatch'
           chai: 'chai'
