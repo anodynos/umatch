@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "lodash": "*",
-    "minimatch": "1.0.x"
+    "minimatch": "3.0.x"
   },
   "devDependencies": {
     "chai": "*",
